@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color:ivory;
+            border: 1cap;
+            border-radius: 0pt;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    line-height: 0.25;
+}
