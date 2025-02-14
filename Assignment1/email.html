@@ -1,37 +1,67 @@
 <!DOCTYPE html>
-    <head>
-        <title> My first HTML program </title>
-        <link rel = "stylesheet" href = 'style1.css'>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            color: navy;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .signature {
+            font-style: italic;
+            font-weight: bold;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-    <body>
-        <header>
-            <p><strong>To: </strong> <a href="myfriend@gmail.com">myfriend@gmail.com</a></p>
-        </header>
+<body>
+    <div class="container">
+        <h1>Application Letter</h1>
+        <p><strong>From:</strong><br>
+        Ramesh Kumar<br>
+        123 MG Road, Trinity Circle<br>
+        Bengaluru, Karnataka, 560001<br>
+        Email: <a href="mailto:ramesh@example.com">ramesh@example.com</a></p>
 
-        <section class = 'subject'>
-            <p><strong>Subject: </strong> Catching Up With An Old Friend</p>
-        </section>
-        
-        <section class = 'content'>
-            <p>Dear Ramesh</p>
-            <p>I hope you are well. It has been a long time since I have messaged you. How is everyone. I recently heard that your son has completed his graduation. Do convey my regards to him. </p>
-            <p>I am pleased to let you know that my daughter has also completed her graduation. She is currently posted as a Marketing Associate in Bangalore.
-                If my memory serves me well, you last saw her when she was 10, so it is unlikely that you would recognize her.
-                 I have added an image of hers for you to see. </p>
-            <img src = "pic1.jpg" width="400" height="200">
-            <p>
-                It is funny that there is a lifetime of things to talk about, but I seem lost for words to write.
-                I am retiring soon. I would love to catch up with you on all the old memories.
-            </p>
-            <p>
-                Expecting news from your end.
-            </p>
-        </section>
-        
-        <footer class = 'signature'>
-            <p> Yours truly</p>
-            <p> Suresh</p>
-        </footer>
-    </body>
+        <p><strong>To:</strong><br>
+        Hiring Manager<br>
+        Tech Solutions India Pvt. Ltd.<br>
+        456 Electronic City, Phase 1<br>
+        Bengaluru, Karnataka, 560100</p>
+
+        <p><em>Subject:</em> Application for Senior Software Developer Position</p>
+
+        <p>Dear <b>Hiring Manager</b>,</p>
+
+        <p>I am writing to express my interest in the <u>Senior Software Developer</u> position at your esteemed organization. With my background in Computer Science and Engineering, I have developed strong skills in full-stack development, cloud computing, and agile methodologies, making me a suitable candidate for this opportunity.</p>
+
+        <p>My experience at <strong>Innovative Systems Technologies</strong> has equipped me with hands-on knowledge in modern web technologies and software development practices. I have successfully contributed to the development of a high-performance e-commerce platform that served over 1 million users and reduced loading times by 40%, which aligns with the objectives of your organization.</p>
+
+        <p>I am eager to bring my expertise and enthusiasm to your team. Enclosed is my resume for your review. I would be grateful for the opportunity to discuss my qualifications further in an interview.</p>
+
+        <p>Sincerely,</p>
+        <p class="signature">Ramesh Kumar</p>
+    </div>
+</body>
 </html>
