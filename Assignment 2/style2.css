@@ -1,0 +1,17 @@
+body{
+    font: Roboto;
+    max-width: 600px;
+    color: blue;
+    margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color:lightyellow;
+            border: 1cap;
+            border-radius: 0pt;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Clickable List</title>
+    <style>
+        /* Remove underline from links */
+        #menu a {
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        /* Change list style to circle */
+        #menu {
+            list-style-type: circle;
+        }
+
+        /* Pseudo-classes for link styling */
+        #menu a:link {
+            color: blue; /* Default link color */
+        }
+
+        #menu a:visited {
+            color: purple; /* Color after visiting */
+        }
+
+        #menu a:hover {
+            color: red; /* Color when hovering */
+        }
+
+        #menu a:active {
+            color: green; /* Color when clicking */
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="menu">
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+        <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+    </ul>
+
+</body>
+</html>

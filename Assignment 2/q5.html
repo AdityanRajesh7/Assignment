@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        th {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        /* Cell Borders */
+        td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        /* Alternate Row Colors */
+        tr:nth-child(odd) {
+            background-color: grey;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgreen;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Roll Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adityan</td>
+                <td>Rajesh</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Haritha</td>
+                <td>Aneesh</td>
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>Santhana</td>
+                <td>Lakshmi</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>Sheron</td>
+                <td>George</td>
+                <td>59</td>
+            </tr>
+            <tr>
+                <td>Gautam</td>
+                <td>P</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>Kiran</td>
+                <td>53</td>
+            </tr>
+            <tr>
+                <td>Aditya</td>
+                <td>S</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>Abhijith</td>
+                <td>Krishna</td>
+                <td>37</td>
+            </tr>
+            <tr>
+                <td>Kurt</td>
+                <td>Sony</td>
+                <td>46</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
