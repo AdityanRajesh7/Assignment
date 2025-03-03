@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        
+        .responsive-image {
+            width: 100%;
+            max-width: 600px;
+            display: none;
+            gap: 10px;
+        }
+
+        .image-large {
+            max-width: 500px;
+        }
+
+        @media (min-width: 600px) {
+            .responsive-image {
+                display: block;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            .image-large {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <img class="responsive-image" src="C:\Users\user\Desktop\ML\Full-stack\Lab 3\flower1.jpg" alt="Responsive Image">
+    <img class="responsive-image image-large" src="C:\Users\user\Desktop\ML\Full-stack\Lab 3\flower2.jpeg" alt="Large Image">
+
+</body>
+</html>

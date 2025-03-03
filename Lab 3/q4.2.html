@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .responsive-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+        }
+
+        
+        .table-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        
+        @media (min-width: 1500px) {
+            table {
+                width: 60%;
+            }
+
+            th:nth-child(1), td:nth-child(1) { width: 30%; }
+            th:nth-child(2), td:nth-child(2) { width: 40%; }
+            th:nth-child(3), td:nth-child(3) { width: 30%; }
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+                width: 100%;
+            }
+
+            tr {
+                margin-bottom: CPT10px;
+                border-bottom: 2px solid black;
+            }
+
+            th {
+                display: none;
+            }
+
+            td {
+                text-align: left;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=300"
+             srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=200 600w,
+                     https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=300 1000w,
+                     https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=500 1500w"
+             sizes="(max-width: 600px) 200px, (min-width: 1500px) 500px, 300px"
+             alt="Responsive Image" class="responsive-img">
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="First Name">John</td>
+                    <td data-label="Last Name">Doe</td>
+                    <td data-label="Age">22</td>
+                </tr>
+                <tr>
+                    <td data-label="First Name">David</td>
+                    <td data-label="Last Name">Thompson</td>
+                    <td data-label="Age">21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

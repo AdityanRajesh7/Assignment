@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 0px;
+            width: 60%;
+            margin: auto;
+        }
+
+        .box {
+            background-color: #FFB6C1;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            border:2px solid black;
+        }
+
+        .box1 {
+            grid-column: span 3;            
+        }
+        .landing{
+            grid-column: span 1;
+            padding: 120px;
+        }
+        .mainpage{
+            grid-column: span 2;
+            padding: 120px;
+        }
+        .footer{
+            grid-column: span 3;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box box1">Header</div>
+        <div class="box landing">A Sidebar1</div>
+        <div class="box mainpage">Main Page</div>
+        <div class="box footer">Footer</div>
+    </div>
+
+</body>
+</html>
