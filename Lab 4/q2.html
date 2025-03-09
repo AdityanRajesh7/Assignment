@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+            body{
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+
+            button{
+                border: none;
+                cursor: pointer;
+                margin: 10px;
+                color: white;
+            }
+
+            .primary{ background-color: blue;}
+            .secondary{ background-color: grey;}
+            .info{ background-color: teal;}
+
+            @media (min-width: 800px) {
+                button {
+                    padding: 12px 24px;
+                    font-size: 18px;
+                }
+            }
+
+            /* For screens between 500px and 800px */
+            @media (min-width: 500px) and (max-width: 800px) {
+                button {
+                    padding: 8px 16px;
+                    font-size: 16px;
+                }
+            }
+
+            /* For screens smaller than 500px */
+            @media (max-width: 500px) {
+                button {
+                    padding: 6px 12px;
+                    font-size: 14px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button class ="primary">Primary</button>
+        <button class ="secondary">Secondary</button>
+        <button class ="info">Info</button>
+    </body>
+
+</html>
