@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body{background-color: black;}
+        table { border-collapse: collapse; margin: 20px; }
+        td, th { border: 1px solid #ddd; padding: 8px; }
+        input { margin: 5px; }
+        .error { color: red; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form id="registrationForm">
+        <table>
+            <tr>
+                <td>Name of Student</td>
+                <td><input type="text" id="name" required></td>
+                <td id="nameError" class="error"></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" id="mobile" required></td>
+                <td id="mobileError" class="error"></td>
+            </tr>
+            <tr>
+                <td>Address Line</td>
+                <td><input type="text" id="address" required></td>
+                <td id="addressError" class="error"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" id="city" required></td>
+                <td id="cityError" class="error"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" id="state" required></td>
+                <td id="stateError" class="error"></td>
+            </tr>
+            <tr>
+                <td>Pincode</td>
+                <td><input type="text" id="pincode" required></td>
+                <td id="pincodeError" class="error"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="resultTable" style="display: none;">
+        <h3>Submitted Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Mobile No</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody id="resultBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const state = document.getElementById('state').value.trim();
+            const pincode = document.getElementById('pincode').value.trim();
+            
+            // Reset error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('mobileError').textContent = '';
+            document.getElementById('addressError').textContent = '';
+            document.getElementById('cityError').textContent = '';
+            document.getElementById('stateError').textContent = '';
+            document.getElementById('pincodeError').textContent = '';
+            
+            // Validation
+            let isValid = true;
+            
+            // Name validation (only alphabets)
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required';
+                isValid = false;
+            } else if (!/^[a-zA-Z\s]+$/.test(name)) {
+                document.getElementById('nameError').textContent = 'Name should contain only alphabets';
+                isValid = false;
+            }
+            
+            // Mobile validation (10 digits)
+            if (!mobile) {
+                document.getElementById('mobileError').textContent = 'Mobile is required';
+                isValid = false;
+            } else if (!/^\d{10}$/.test(mobile)) {
+                document.getElementById('mobileError').textContent = 'Mobile should be 10 digits';
+                isValid = false;
+            }
+            
+            // Address validation
+            if (!address) {
+                document.getElementById('addressError').textContent = 'Address is required';
+                isValid = false;
+            }
+            
+            // City validation
+            if (!city) {
+                document.getElementById('cityError').textContent = 'City is required';
+                isValid = false;
+            }
+            
+            // State validation
+            if (!state) {
+                document.getElementById('stateError').textContent = 'State is required';
+                isValid = false;
+            }
+            
+            // Pincode validation (6 digits)
+            if (!pincode) {
+                document.getElementById('pincodeError').textContent = 'Pincode is required';
+                isValid = false;
+            } else if (!/^\d{6}$/.test(pincode)) {
+                document.getElementById('pincodeError').textContent = 'Pincode should be 6 digits';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Display the result
+                const resultBody = document.getElementById('resultBody');
+                resultBody.innerHTML = `
+                    <tr>
+                        <td>${name}</td>
+                        <td>${mobile}</td>
+                        <td>${state}</td>
+                    </tr>
+                `;
+                document.getElementById('resultTable').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
